@@ -12,6 +12,7 @@ q = Qbit(Auth.HOST, Auth.USER, Auth.PASSWORD)
 process = Popen(["./port_forwarding.sh"], stdout=PIPE, stderr=PIPE)
 stdout, stderr = process.communicate()
 stdout = stdout.decode("utf-8")
+print(stdout)
 
 stdout = json.loads(stdout)
 port = stdout["port"]

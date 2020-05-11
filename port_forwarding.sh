@@ -29,7 +29,7 @@ version() {
 }
 
 port_forward_assignment() {
-  echo 'Loading port forward assignment information...'
+  # echo 'Loading port forward assignment information...'
   if [ "$(uname)" == "Linux" ]; then
     client_id=$(head -n 100 /dev/urandom | sha256sum | tr -d " -")
   fi
