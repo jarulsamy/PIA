@@ -3,7 +3,7 @@ from subprocess import PIPE
 from subprocess import Popen
 
 from loader import load_config
-from qbittorrent import Qbit
+from pyqbit import Qbit
 
 Auth = load_config("config.yaml")
 
