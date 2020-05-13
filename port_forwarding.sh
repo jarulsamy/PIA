@@ -39,7 +39,7 @@ port_forward_assignment() {
 
   json=$(curl "http://209.222.18.222:2000/?client_id=$client_id" 2>/dev/null)
   if [ "$json" == "" ]; then
-    json='Port forwarding is already activated on this connection, has expired, or you are not connected to a PIA region that supports port forwarding'
+    echo >&2 'Port forwarding is already activated on this connection, has expired, or you are not connected to a PIA region that supports port forwarding'
   fi
 
   echo $json
